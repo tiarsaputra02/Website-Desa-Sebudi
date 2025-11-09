@@ -91,29 +91,29 @@
                 </a>
             </li>
 
-            <li class="sidebar-item {{ request()->is('') ? 'active' : ''}} ">
-                <a href="{{ url('/pendidikan') }}" class='sidebar-link'>
+            <li class="sidebar-item {{ request()->is('education') ? 'active' : ''}} ">
+                <a href="{{ url('/education') }}" class='sidebar-link'>
                     <i class="bi bi-mortarboard"></i>
                     <span>Pendidikan</span>
                 </a>
             </li>
 
-            <li class="sidebar-item {{ request()->is('') ? 'active' : ''}} ">
-                <a href="{{ url('/pekerjaan') }}" class='sidebar-link'>
+            <li class="sidebar-item {{ request()->is('profesion') ? 'active' : ''}} ">
+                <a href="{{ url('/profesion') }}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Pekerjaan</span>
                 </a>
             </li>
 
-            <li class="sidebar-item {{ request()->is('') ? 'active' : ''}} ">
-                <a href="{{ url('/agama') }}" class='sidebar-link'>
+            <li class="sidebar-item {{ request()->is('religion') ? 'active' : ''}} ">
+                <a href="{{ url('/religion') }}" class='sidebar-link'>
                     <i class="bi bi-building"></i>
                     <span>Agama</span>
                 </a>
             </li>
 
-            <li class="sidebar-item {{ request()->is('') ? 'active' : ''}} ">
-                <a href="{{ url('/agama') }}" class='sidebar-link'>
+            <li class="sidebar-item {{ request()->is('marital') ? 'active' : ''}} ">
+                <a href="{{ url('/marital') }}" class='sidebar-link'>
                     <i class="bi bi-heart"></i>
                     <span>Status Pernikahan</span>
                 </a>
