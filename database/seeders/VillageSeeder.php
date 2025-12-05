@@ -15,16 +15,16 @@ class VillageSeeder extends Seeder
     public function run(): void
     {
         $villages = [
-            ['nama_wilayah' => 'Banjar Dinas Sorga', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Sebudi', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Badeg Dukuh', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Badeg Tengah', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Badeg Kelodan', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Ancut ', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Yeha ', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Pura ', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Lebih ', 'created_at' => now(), 'updated_at' => now()],
-            ['nama_wilayah' => 'Banjar Dinas Telung Buana ', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Sorga','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Sebudi','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Badeg Dukuh','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Badeg Tengah','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Badeg Kelodan','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Ancut ','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Yeha ','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Pura ','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Lebih ','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
+            ['nama_wilayah' => 'Banjar Dinas Telung Buana ','desa' => 'Sebudi','kecamatan' => 'Selat','kabupaten'=> 'Karangasem', 'created_at' => now(), 'updated_at' => now()],
         ];
 
         DB::table('villages')->insert($villages);

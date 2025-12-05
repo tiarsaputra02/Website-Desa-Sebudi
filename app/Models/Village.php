@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Village extends Model
 {
     use HasFactory, SoftDeletes;
-    protected  $fillable = ['nama_wilayah'];
+    protected  $fillable = ['nama_wilayah','desa','kecamatan','kabupaten','provinsi'];
 }
