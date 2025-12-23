@@ -48,6 +48,34 @@ class AuthenticatedSessionController extends Controller
         return redirect('/dashboard/dukuh');
     }
 
+    if ($role === 'Admin Banjar Sebudi') {
+        return redirect('/dashboard/sebudi');
+    }
+
+    if ($role === 'Admin Banjar Badeg Tengah') {
+        return redirect('/dashboard/tengah');
+    }
+
+    if ($role === 'Admin Banjar Badeg Kelodan') {
+        return redirect('/dashboard/kelodan');
+    }
+
+    if ($role === 'Admin Banjar Ancut') {
+        return redirect('/dashboard/ancut');
+    }
+
+    if ($role === 'Admin Banjar Yeha') {
+        return redirect('/dashboard/yeha');
+    }
+
+    if ($role === 'Admin Banjar Lebih') {
+        return redirect('/dashboard/lebih');
+    }
+
+    if ($role === 'Admin Banjar Telung Buana') {
+        return redirect('/dashboard/buana');
+    }
+
     // Default kalau role tidak dikenal
     return redirect('/');
     }

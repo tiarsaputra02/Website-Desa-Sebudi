@@ -18,7 +18,6 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
                         <li class="breadcrumb-item " aria-current="page">Kepala Keluarga</li>
                         <li class="breadcrumb-item active" aria-current="page">Detail Kepala Keluarga</li>
                     </ol>
@@ -81,7 +80,7 @@
 
 
                 <div class="d-flex">
-                    <a href="{{ route ('citizen.pura.create', $family->id) }} " class="btn btn-success mb-3 ms-auto">Tambahkan Data Agota Keluarga {{$family->kepala_keluarga}}</a>
+                    <a href="{{ route ('citizen.dukuh.create', $family->id) }} " class="btn btn-success mb-3 ms-auto">Tambahkan Data Agota Keluarga {{$family->kepala_keluarga}}</a>
                 </div>
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -99,10 +98,10 @@
                             <td>{{$citizens->nik}}</td>
                             <td>{{$citizens->status_keluarga}}</td>
                             <td>
-                                <a href="{{ route ('bpjs.pura.create', $citizens->id) }} " class="btn btn-success btn-sm">Tambah BPJS</a>
-                                <a href="{{ route ('citizen.pura.show', $citizens->id) }} " class="btn btn-primary btn-sm">Lihat Data</a>
-                                <a href="{{ route ('citizen.pura.edit', $citizens->id) }} " class="btn btn-warning btn-sm">Ubah</a>
-                                <form action="{{ route ('citizen.pura.destroy', $citizens->id) }}" method="POST" style="display:inline">
+                                <a href="{{ route ('bpjs.dukuh.create', $citizens->id) }} " class="btn btn-success btn-sm">Tambah BPJS</a>
+                                <a href="{{ route ('citizen.dukuh.show', $citizens->id) }} " class="btn btn-primary btn-sm">Lihat Data</a>
+                                <a href="{{ route ('citizen.dukuh.edit', $citizens->id) }} " class="btn btn-warning btn-sm">Ubah</a>
+                                <form action="{{ route ('citizen.dukuh.destroy', $citizens->id) }}" method="POST" style="display:inline">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Yakin Menghapus Data  {{$citizens->nama_lengkap}}  ?')">Hapus</button>
@@ -114,7 +113,7 @@
                 </table>
             </div>
 
-                <a href="{{route('pura.index')}}" class="btn btn-secondary">Kembali Ke Daptar Kepala Keluarga</a>
+                <a href="{{route('dukuh.index')}}" class="btn btn-secondary">Kembali Ke Daptar Kepala Keluarga</a>
             </div>
         </div>
 

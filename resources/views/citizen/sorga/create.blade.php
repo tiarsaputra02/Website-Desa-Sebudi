@@ -152,6 +152,9 @@
                                 <option value="Istri" {{ old('status_keluarga') == 'Istri' ? 'selected' : '' }}>Istri</option>
                                 <option value="Anak" {{ old('status_keluarga') == 'Anak' ? 'selected' : '' }}>Anak</option>
                                 <option value="Orang Tua" {{ old('status_keluarga') == 'Orang Tua' ? 'selected' : '' }}>Orang Tua</option>
+                                <option value="Menantu" {{ old('status_keluarga') == 'Menantu' ? 'selected' : '' }}>Menantu</option>
+                                <option value="Cucu" {{ old('status_keluarga') == 'Cucu' ? 'selected' : '' }}>Cucu</option>
+                                <option value="Lainnya" {{ old('status_keluarga') == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                             </select>
                         @error('status_keluarga')
                             <div class="invalid-feedback">{{ $message }}</div>

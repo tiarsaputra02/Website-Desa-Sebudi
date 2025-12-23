@@ -143,31 +143,31 @@
                         <a href="{{ url('/family/sorga') }}" class="submenu-link">Banjar Dinas Sogra</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-anyar') }}" class="submenu-link">Banjar Dinas Sebudi</a>
+                        <a href="{{ url('/family/sebudi') }}" class="submenu-link">Banjar Dinas Sebudi</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Dukuh</a>
+                        <a href="{{ url('/family/dukuh') }}">Banjar Dinas Badeg Dukuh</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Tengah</a>
+                        <a href="{{ url('/family/tengah') }}">Banjar Dinas Badeg Tengah</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Kelodan</a>
+                        <a href="{{ url('/family/kelodan') }}">Banjar Dinas Badeg Kelodan</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Ancut</a>
+                        <a href="{{ url('/family/ancut') }}">Banjar Dinas Ancut</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Yeha</a>
+                        <a href="{{ url('/family/yeha') }}">Banjar Dinas Yeha</a>
                     </li>
                     <li class="submenu-item">
                         <a href="{{ url('/family/pura') }}">Banjar Dinas Pura</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Lebih</a>
+                        <a href="{{ url('/family/lebih') }}">Banjar Dinas Lebih</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Telung Buana</a>
+                        <a href="{{ url('/family/telung') }}">Banjar Dinas Telung Buana</a>
                     </li>
                 </ul>
             </li>
@@ -179,34 +179,34 @@
                 </a>
                  <ul class="submenu">
                     <li class="submenu-item">
-                        <a href="" class="submenu-link">Banjar Dinas Sogra</a>
+                        <a href="{{ url('/citizen/sorga/1') }}" class="submenu-link">Banjar Dinas Sogra</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-anyar') }}" class="submenu-link">Banjar Dinas Sebudi</a>
+                        <a href="{{ url('/citizen/sebudi/2') }}" class="submenu-link">Banjar Dinas Sebudi</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Dukuh</a>
+                        <a href="{{ url('/citizen/dukuh/3') }}">Banjar Dinas Badeg Dukuh</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Tengah</a>
+                        <a href="{{ url('/citizen/tengah/4') }}">Banjar Dinas Badeg Tengah</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Badeg Kelodan</a>
+                        <a href="{{ url('/citizen/kelodan/5') }}">Banjar Dinas Badeg Kelodan</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Ancut</a>
+                        <a href="{{ url('/citizen/ancut/6') }}">Banjar Dinas Ancut</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Yeha</a>
+                        <a href="{{ url('/citizen/yeha/7') }}">Banjar Dinas Yeha</a>
                     </li>
                     <li class="submenu-item">
                         <a href="{{ url('/citizen/pura/8') }}">Banjar Dinas Pura</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Lebih</a>
+                        <a href="{{ url('/citizen/lebih/9') }}">Banjar Dinas Lebih</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('wilayah/banjar-kaja') }}">Banjar Dinas Telung Buana</a>
+                        <a href="{{ url('/citizen/telung/10') }}">Banjar Dinas Telung Buana</a>
                     </li>
                 </ul>
             </li>
@@ -222,31 +222,31 @@
                         class="submenu-link">BPJS Banjar Dinas Sogra</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}" class="submenu-link">BPJS Banjar Dinas Sebudi</a>
+                        <a href="{{ url('/bpjs/sebudi') }}" class="submenu-link">BPJS Banjar Dinas Sebudi</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Badeg Dukuh</a>
+                        <a href="{{ url('/bpjs/dukuh') }}" class="submenu-link">BPJS Banjar Dinas Badeg Dukuh</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Badeg Tengah</a>
+                        <a href="{{ url('/bpjs/tengah') }}" class="submenu-link">BPJS Banjar Dinas Badeg Tengah</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Badeg Kelodan</a>
+                        <a href="{{ url('/bpjs/kelodan') }}" class="submenu-link">BPJS Banjar Dinas Badeg Kelodan</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Ancut</a>
+                        <a href="{{ url('/bpjs/ancut') }}" class="submenu-link">BPJS Banjar Dinas Ancut</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Yeha</a>
+                        <a href="{{ url('/bpjs/yeha') }}" class="submenu-link">BPJS Banjar Dinas Yeha</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('/bpjs/pura') }}">BPJS Banjar Dinas Pura</a>
+                        <a href="{{ url('/bpjs/pura') }}" class="submenu-link">BPJS Banjar Dinas Pura</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Lebih</a>
+                        <a href="{{ url('/bpjs/lebih') }}" class="submenu-link">BPJS Banjar Dinas Lebih</a>
                     </li>
                     <li class="submenu-item">
-                        <a href="{{ url('') }}">BPJS Banjar Dinas Telung Buana</a>
+                        <a href="{{ url('/bpjs/telung') }}" class="submenu-link">BPJS Banjar Dinas Telung Buana</a>
                     </li>
                 </ul>
             </li>
@@ -327,6 +327,195 @@
             </li>
             <li class="sidebar-item {{ request()->is('bpjs/dukuh') ? 'active' : ''}} ">
                 <a href="{{url('/bpjs/dukuh')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Sebudi')
+            <li class="sidebar-item {{ request()->is('dashboard/sebudi') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/sebudi')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/sebudi') ? 'active' : ''}} ">
+                <a href="{{url('/family/sebudi')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/sebudi/2') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/sebudi/2')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/sebudi') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/sebudi')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Badeg Tengah')
+            <li class="sidebar-item {{ request()->is('dashboard/tengah') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/tengah')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/tengah') ? 'active' : ''}} ">
+                <a href="{{url('/family/tengah')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/tengah/4') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/tengah/4')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/tengah') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/tengah')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Badeg Kelodan')
+            <li class="sidebar-item {{ request()->is('dashboard/kelodan') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/kelodan')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/kelodan') ? 'active' : ''}} ">
+                <a href="{{url('/family/kelodan')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/kelodan/5') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/kelodan/5')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/kelodan') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/kelodan')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Ancut')
+            <li class="sidebar-item {{ request()->is('dashboard/ancut') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/ancut')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/ancut') ? 'active' : ''}} ">
+                <a href="{{url('/family/ancut')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/ancut/6') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/ancut/6')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/ancut') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/ancut')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Yeha')
+            <li class="sidebar-item {{ request()->is('dashboard/yeha') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/yeha')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/yeha') ? 'active' : ''}} ">
+                <a href="{{url('/family/yeha')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/yeha/7') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/yeha/7')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/yeha') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/yeha')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Lebih')
+            <li class="sidebar-item {{ request()->is('dashboard/lebih') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/lebih')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/lebih') ? 'active' : ''}} ">
+                <a href="{{url('/family/lebih')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/lebih/9') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/lebih/9')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/lebih') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/lebih')}}" class='sidebar-link'>
+                    <i class="bi bi-briefcase"></i>
+                    <span>Data BPJS</span>
+                </a>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Banjar Telung Buana')
+            <li class="sidebar-item {{ request()->is('dashboard/buana') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard/buana')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('family/buana') ? 'active' : ''}} ">
+                <a href="{{url('/family/buana')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Kepala Keluarga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('citizen/buana/10') ? 'active' : ''}} ">
+                <a href="{{url('/citizen/buana/10')}}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('bpjs/buana') ? 'active' : ''}} ">
+                <a href="{{url('/bpjs/buana')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
                 </a>

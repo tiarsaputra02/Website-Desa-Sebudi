@@ -13,13 +13,13 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Warga Banjar Dinas Pura</h3>
+                <h3>Warga Banjar Dinas Badeg Dukuh</h3>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item " aria-current="page">Warga Banjar Dinas Pura</li>
-                        <li class="breadcrumb-item active" aria-current="page">Detail Warga Banjar Dinas Pura</li>
+                        <li class="breadcrumb-item " aria-current="page">Warga Banjar Dinas Badeg Dukuh</li>
+                        <li class="breadcrumb-item active" aria-current="page">Detail Warga Banjar Dinas Badeg Dukuh</li>
                     </ol>
                 </nav>
             </div>
@@ -29,7 +29,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">
-                    Detail Warga Banjar Dinas Pura
+                    Detail Warga Banjar Dinas Badeg Dukuh
                 </h4>
             </div>
             <div class="card-body">
@@ -260,8 +260,8 @@
                         </a>
                 </div>
 
-               <a href="{{route('citizen.pura.citizen.pura', $citizen->Villages->id)}}" class="btn btn-secondary">Kembali Data Warga</a>
-               <a href="{{route ('pura.show',$citizen->FamilyHead->id)}}" class="btn btn-secondary">Kembali Kedaptar Angota Keluarga {{$citizen->FamilyHead->kepala_keluarga}}</a>
+               <a href="{{route('citizen.dukuh.citizen.dukuh', $citizen->Villages->id)}}" class="btn btn-secondary">Kembali Data Warga</a>
+               <a href="{{route ('dukuh.show',$citizen->FamilyHead->id)}}" class="btn btn-secondary">Kembali Kedaptar Angota Keluarga {{$citizen->FamilyHead->kepala_keluarga}}</a>
 
             </div>
         </div>

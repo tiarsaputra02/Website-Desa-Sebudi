@@ -150,6 +150,9 @@
                                 <option value="Istri" {{ old('status_keluarga',$citizen->status_keluarga) == 'Istri' ? 'selected' : '' }}>Istri</option>
                                 <option value="Anak" {{ old('status_keluarga',$citizen->status_keluarga) == 'Anak' ? 'selected' : '' }}>Anak</option>
                                 <option value="Orang Tua" {{ old('status_keluarga',$citizen->status_keluarga) == 'Orang Tua' ? 'selected' : '' }}>Orang Tua</option>
+                                <option value="Menantu" {{ old('status_keluarga',$citizen->status_keluarga) == 'Menantu' ? 'selected' : '' }}>Menantu </option>
+                                <option value="Cucu" {{ old('status_keluarga',$citizen->status_keluarga) == 'Cucu' ? 'selected' : '' }}>Cucu </option>
+                                <option value="Lainnya" {{ old('status_keluarga',$citizen->status_keluarga) == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                             </select>
                         @error('status_keluarga')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -213,7 +216,7 @@
                         <label for="" class="form-label">Status Hidup</label>
                             <select name="status_hidup" id="status_hidup" class="form-control" required>
                                 <option value="Hidup" {{ old('status_hidup',$citizen->status_hidup) == 'Hidup' ? 'selected' : '' }}>Hidup</option>
-                                <option value="Mati" {{ old('status_Hidup',$citizen->status_hidup) == 'Mati' ? 'selected' : '' }}>Mati</option>
+                                <option value="Meninggal" {{ old('status_hidup',$citizen->status_hidup) == 'Meninggal' ? 'selected' : '' }}>Meninggal</option>
                             </select>
                     </div>
 

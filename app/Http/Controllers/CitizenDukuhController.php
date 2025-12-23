@@ -43,7 +43,7 @@ class CitizenDukuhController extends Controller
         'tanggal_lahir'    => 'required|date',
         'jenis_kelamin'    => 'required|in:Laki-Laki,Perempuan',
         'kewarganegaraan'  => 'required|string|max:255',
-        'status_keluarga'  => 'required|in:Kepala Keluarga,Istri,Anak,Orang Tua',
+        'status_keluarga'  => 'required',
         'ayah'             => 'required|string|max:255',
         'ibu'              => 'required|string|max:255',
         'status_hidup'     => 'required|in:Hidup,Mati',

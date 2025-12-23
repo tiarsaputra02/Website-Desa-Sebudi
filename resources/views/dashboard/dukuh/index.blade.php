@@ -21,7 +21,7 @@
             <div class="card">
                  <div class="card-header d-flex justify-content-between align-items-center">
                      <h4>Jumlah Warga Banjar Dinas Badeg Dukuh Tahun {{$tahun}}</h4>
-                        <form method="GET" action="{{ route('dashboard.pura') }}">
+                        <form method="GET" action="{{ route('dashboard.dukuh') }}">
                             <select name="tahun" class="form-select" onchange="this.form.submit()">
                             <option>Tahun Data {{$tahun}}</option>
                             @foreach ($listTahun as $t)

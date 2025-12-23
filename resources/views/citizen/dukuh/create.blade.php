@@ -18,7 +18,6 @@
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item " aria-current="page"> Warga Banjar Dinas Badeg Dukuh</li>
-                        <li class="breadcrumb-item " aria-current="page">Banjar Dinas Badeg Dukuh</li>
                         <li class="breadcrumb-item active" aria-current="page">Tambah  Warga Banjar Dinas Badeg Dukuh </li>
                     </ol>
                 </nav>
@@ -33,7 +32,7 @@
                 </h5>
             </div>
             <div class="card-body">
-                <form action="{{ route ('citizen.pura.store')}}" method="POST">
+                <form action="{{ route ('citizen.dukuh.store')}}" method="POST">
 
                     @csrf
 
@@ -149,6 +148,9 @@
                                 <option value="Istri" {{ old('status_keluarga') == 'Istri' ? 'selected' : '' }}>Istri</option>
                                 <option value="Anak" {{ old('status_keluarga') == 'Anak' ? 'selected' : '' }}>Anak</option>
                                 <option value="Orang Tua" {{ old('status_keluarga') == 'Orang Tua' ? 'selected' : '' }}>Orang Tua</option>
+                                <option value="Menantu" {{ old('status_keluarga') == 'Menantu' ? 'selected' : '' }}>Menantu</option>
+                                <option value="Cucu" {{ old('status_keluarga') == 'Cucu' ? 'selected' : '' }}>Cucu</option>
+                                <option value="Lainnya" {{ old('status_keluarga') == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                             </select>
                         @error('status_keluarga')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -209,12 +211,12 @@
                         <label for=""class="form-label">Jenis Bantuan</label>
                             <select  name="bantuan_id" id="bantuan_id" class="form-control @error('bantuan_id') is-invalid @enderror" value="{{old('bantuan_id')}}" required>
                                     <option value="">Pilih Jenis Bantuan</option>
+                                    <option value="">Tidak Ada Bantuan</option>
                                 @foreach ($assistancetypes as $assistancetypess)
                                     <option value="{{ $assistancetypess->id }}" {{ old('bantuan_id') == $assistancetypess->id ? 'selected' : '' }}>
                                         {{$assistancetypess->jenis_bantuan}}
                                     </option>
                                 @endforeach
-                                    <option value="">Tidak Ada Bantuan</option>
                             </select>
                             @error('bantuan_id')
                             <div class="invalid-feedback" >{{$message}}</div>
@@ -222,7 +224,7 @@
                     </div>
 
                     <button type="submit"class="btn btn-primary">Tambah Angota Keluarga {{$familyhead->kepala_keluarga}} </button>
-                    <a href="{{route ('pura.show', $familyhead->id)}}" class="btn btn-secondary">Kembali Ke Kartu Keluraga {{$familyhead->kepala_keluarga}}</a>
+                    <a href="{{route ('dukuh.show', $familyhead->id)}}" class="btn btn-secondary">Kembali Ke Kartu Keluraga {{$familyhead->kepala_keluarga}}</a>
 
                 </form>
             </div>
