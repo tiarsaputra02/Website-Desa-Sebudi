@@ -35,6 +35,9 @@ class AuthenticatedSessionController extends Controller
     if ($role === 'Admin Utama') {
         return redirect('/dashboard');
     }
+    if ($role === 'Admin Desa') {
+        return redirect('/dashboard');
+    }
 
     if ($role === 'Admin Banjar Pura') {
         return redirect('/dashboard/pura');

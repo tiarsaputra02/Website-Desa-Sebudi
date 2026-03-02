@@ -36,8 +36,20 @@
                     <a href="{{ route ('sorga.create') }} " class="btn btn-success mb-3 ms-auto">Tambahkan Kepala Keluarga Baru</a>
                 </div>
 
+
                 @if(session('success'))
                     <div class="alert alert-success" >{{session('success')}}</div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                        const alert = document.querySelector('.alert');
+                            if (alert) {
+                                setTimeout(() => {
+                                const bsAlert = new bootstrap.Alert(alert);
+                                bsAlert.close(); // auto-dismiss pakai animasi fade bawaan Bootstrap
+                                  }, 3000); // 3 detik
+                                }
+                             });
+                    </script>
                 @endif
 
                 <table class="table table-striped" id="table1">

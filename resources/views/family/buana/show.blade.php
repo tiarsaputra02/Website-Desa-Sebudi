@@ -54,6 +54,22 @@
                         </a>
                 </div>
 
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary btn-md dropdown-toggle" data-bs-toggle="dropdown">
+            Pilih Surat
+        </button>
+        <ul class="dropdown-menu">
+@foreach($jenis_surat as $jenis)
+    <li>
+        <a class="dropdown-item" 
+           href="{{ route('surat.create', [$family->id, $jenis->id]) }}?redirect={{ Route::currentRouteName() }}">
+            {{ $jenis->nama_surat }}
+        </a>
+    </li>
+@endforeach
+</ul>
+    </div>
+
             <div class="pt-5">
                 <h5>
                     Angggota Kepala Keluarga
@@ -113,6 +129,64 @@
                 </table>
             </div>
 
+<!-- ====================== -->
+<!-- TABEL SURAT -->
+<!-- ====================== -->
+<div class="pt-5">
+    <h5>Daftar Surat Kepala Keluarga</h5>
+</div>
+
+@if($family->surat->isEmpty())
+    <p>Belum ada surat yang dibuat untuk keluarga ini.</p>
+@else
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nomor Surat</th>
+                    <th>Jenis Surat</th>
+                    <th>Tanggal Surat</th>
+                    <th>Nama Surat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($family->surat as $surat)
+                <tr>
+                    <td>{{ $surat->nomor_surat }}</td>
+                    <td>{{ $surat->jenisSurat->nama_surat ?? '-' }}</td>
+                    <td>{{ \Carbon\Carbon::parse($surat->tanggal_surat)->format('d-m-Y') }}</td>
+                    <td>{{ $surat->nama_surat }}</td>
+                    <td>
+                        @if($surat->file_path && file_exists(storage_path('app/public/' . $surat->file_path)))
+                            <a href="{{ asset('storage/' . $surat->file_path) }}"
+                               target="_blank"
+                               class="btn btn-primary btn-sm mb-1">
+                               Download
+                            </a>
+
+                        @else
+                            <span class="text-danger">File tidak tersedia</span>
+                        @endif
+                        <form action="{{ route('surat.destroy', $surat->id) }}"
+                          method="POST"
+                          style="display:inline">
+                         @csrf
+                        @method('DELETE')
+                        <button type="submit"
+                            class="btn btn-danger btn-sm mb-1"
+                            onclick="return confirm('Yakin ingin menghapus surat ini?')">
+                        Hapus
+                        </button>
+                    </form>
+
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+@endif
                 <a href="{{route('buana.index')}}" class="btn btn-secondary">Kembali Ke Daptar Kepala Keluraga</a>
             </div>
         </div>

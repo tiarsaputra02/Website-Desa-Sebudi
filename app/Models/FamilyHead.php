@@ -28,4 +28,8 @@ class FamilyHead extends Model
     {
         return $this->hasMany(Citizen::class, 'kepala_keluarga');
     }
+    public function surat()
+    {
+    return $this->hasMany(Surat::class, 'family_id');
+    }
 }

@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -43,17 +42,28 @@ use App\Http\Controllers\BpjsMemberLebihController;
 use App\Http\Controllers\BpjsMemberBuanaController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SuratController;
+use App\Http\Controllers\SuratDesaController;
+use App\Http\Controllers\JenisSuratController;
+use App\Http\Controllers\KeuanganDesaController;
 
 Route::get('/', function () {
     return view('frontend.index');
 });
 
 Route::get('/',[FrontEndController::class,'index'])->name('dashboard');
+Route::get('/data-masyarakat',[FrontEndController::class,'data'])->name('data');
+Route::get('/berita/{slug}', [FrontEndController::class, 'show'])->name('berita.show');
+Route::get('/berita-desa/', [FrontEndController::class, 'utama'])->name('berita.utama');
+Route::get('/profil-desa/', [FrontEndController::class, 'profil'])->name('profil');
+Route::get('/surat-desa', [FrontEndController::class, 'suratdesa'])->name('suratdesa');
+Route::get('/dana-desa', [FrontEndController::class, 'danadesa'])->name('danadesa');
 
 Route::middleware('auth')->group(function(){
 
 //Route Dashbiard
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('role:Admin Utama');
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('role:Admin Utama,Admin Desa');
 
 //Route Empeloyee
 Route::resource('/employee',EmployeesController::class);
@@ -82,6 +92,48 @@ Route::resource('/assistance',AssistanceController::class);
 //Route User/Akun
 Route::resource('/user',UserController::class);
 //
+//Route News
+Route::delete('/news/image/{id}', [NewsController::class, 'destroyImage'])
+     ->name('news.image.destroy');
+Route::get('/{news:slug}/images', [NewsController::class, 'manageImages'])->name('news.images.manage');
+
+Route::resource('/news',NewsController::class);
+//
+Route::resource('SuratDesa', SuratDesaController::class);
+
+Route::resource('jenis-surat', JenisSuratController::class);
+
+Route::middleware(['auth'])->group(function () {
+
+    // Form input surat dari halaman KK
+    Route::get('/kk/{family}/surat/{jenis}',
+        [SuratController::class, 'create'])
+        ->name('surat.create');
+
+    // Simpan surat
+    Route::post('/kk/{family}/surat/{jenis}',
+        [SuratController::class, 'store'])
+        ->name('surat.store');
+
+});
+Route::delete('/surat/{surat}',
+    [SuratController::class, 'destroy']
+)->name('surat.destroy');
+
+Route::get('surat-keluar', [SuratController::class, 'SuratKeluar'])
+    ->name('surat-keluar');
+
+
+
+Route::prefix('keuangan')->group(function () {
+    Route::get('/', [KeuanganDesaController::class, 'index'])->name('keuangan.index');
+    Route::get('/create', [KeuanganDesaController::class, 'create'])->name('keuangan.create');
+    Route::post('/store', [KeuanganDesaController::class, 'store'])->name('keuangan.store');
+    Route::get('/{apbdes}/edit', [KeuanganDesaController::class, 'edit'])->name('keuangan.edit');
+    Route::put('/{apbdes}', [KeuanganDesaController::class, 'update'])->name('keuangan.update');
+    Route::delete('/{apbdes}', [KeuanganDesaController::class, 'destroy'])->name('keuangan.destroy');
+});
+
 
 
 
@@ -464,7 +516,9 @@ Route::prefix('bpjs/buana')->name('bpjs.buana.')->group(function () {
 
     Route::delete('/{id}', [BpjsMemberBuanaController::class, 'destroy'])->name('destroy')->middleware('role:Admin Utama,Admin Desa,Admin Banjar Badeg Telung Buana');
 });
+
 });
+
 
 
 

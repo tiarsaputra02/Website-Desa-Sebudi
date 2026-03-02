@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FamilyHead;
+use App\Models\JenisSurat;
 use App\Models\Village;
 use App\Models\citizen;
 use Illuminate\Support\Facades\Storage;
@@ -104,8 +105,9 @@ class FamilyHeaddukuhController extends Controller
 
     public function show($id)
     {
-        $family = FamilyHead::with('citizen')->findOrFail($id);
-        return view('family.dukuh.show',compact('family'));
+        $family = FamilyHead::with(['citizen','surat'])->findOrFail($id);
+        $jenis_surat = JenisSurat::all();
+        return view('family.dukuh.show',compact('family','jenis_surat'));
 
     }
 

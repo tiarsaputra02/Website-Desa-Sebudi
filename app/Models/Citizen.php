@@ -70,4 +70,9 @@ class Citizen extends Model
     {
         return $this->hasMany(BpjsMember::class,'warga_id');
     }
+
+    public function suratPihak()
+    {
+        return $this->hasMany(SuratPihak::class, 'citizens_id');
+    }
 }

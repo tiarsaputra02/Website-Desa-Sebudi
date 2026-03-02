@@ -14,7 +14,7 @@ class DashboardController extends Controller
     {
 
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -248,7 +248,7 @@ class DashboardController extends Controller
     public function pura(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -493,7 +493,7 @@ class DashboardController extends Controller
     public function sorga(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -737,7 +737,7 @@ class DashboardController extends Controller
     public function dukuh(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -983,7 +983,7 @@ class DashboardController extends Controller
     public function sebudi(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -1474,7 +1474,7 @@ class DashboardController extends Controller
     public function kelodan(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -1720,7 +1720,7 @@ class DashboardController extends Controller
     public function ancut(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -1966,7 +1966,7 @@ class DashboardController extends Controller
     public function yeha(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -2212,7 +2212,7 @@ class DashboardController extends Controller
     public function lebih(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }
@@ -2458,7 +2458,7 @@ class DashboardController extends Controller
     public function buana(Request $request)
     {
     if ($request->tahun === null) {
-        $tahun = 2025;
+        $tahun = now()->year;
     }else {
     $tahun = $request->tahun;
     }

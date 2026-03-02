@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\FamilyHead;
 use App\Models\Village;
 use App\Models\citizen;
+use App\Models\JenisSurat;
 use Illuminate\Support\Facades\Storage;
 
 class FamilyHeadPuraController extends Controller
@@ -104,8 +105,11 @@ class FamilyHeadPuraController extends Controller
 
     public function show($id)
     {
-        $family = FamilyHead::with('citizen')->findOrFail($id);
-        return view('family.pura.show',compact('family'));
+
+        $family = FamilyHead::with(['citizen','surat'])->findOrFail($id);
+        $jenis_surat = JenisSurat::all();
+
+        return view('family.pura.show',compact('family','jenis_surat'));
 
     }
 

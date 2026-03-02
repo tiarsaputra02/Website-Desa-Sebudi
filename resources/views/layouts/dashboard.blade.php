@@ -23,6 +23,9 @@
     <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
             <div class="logo">
+                 <a href="{{ url('/dashboard') }}">
+                     <img src="{{ asset('images/logo.png') }}" alt="Logo Desa Sebudi" style="height:100px;">
+                 </a>
             </div>
             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
@@ -132,6 +135,191 @@
                 </a>
             </li>
 
+            <li class="sidebar-item {{ request()->is('news') ? 'active' : ''}} ">
+                <a href="{{ url('/news') }}" class='sidebar-link'>
+                    <i class="bi bi-table"></i>
+                    <span>Berita Desa</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ request()->is('jenis-surat') ? 'active' : ''}} ">
+                <a href="{{ url('/jenis-surat') }}" class='sidebar-link'>
+                    <i class="bi bi-table"></i>
+                    <span>Tempelate Surat Desa</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ request()->is('keuangan') ? 'active' : ''}} ">
+                <a href="{{ url('/keuangan') }}" class='sidebar-link'>
+                    <i class="bi bi-table"></i>
+                    <span>Apbdes Desa</span>
+                </a>
+            </li>
+
+
+            <li class="sidebar-item has-sub {{ request()->is('') ? 'active' : ''}} ">
+                <a href="{{ url('') }}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Kepala Keluarga</span>
+                </a>
+                 <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/sorga') }}" class="submenu-link">Banjar Dinas Sogra</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/sebudi') }}" class="submenu-link">Banjar Dinas Sebudi</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/dukuh') }}">Banjar Dinas Badeg Dukuh</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/tengah') }}">Banjar Dinas Badeg Tengah</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/kelodan') }}">Banjar Dinas Badeg Kelodan</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/ancut') }}">Banjar Dinas Ancut</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/yeha') }}">Banjar Dinas Yeha</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/pura') }}">Banjar Dinas Pura</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/lebih') }}">Banjar Dinas Lebih</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/family/telung') }}">Banjar Dinas Telung Buana</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-item has-sub {{ request()->is('') ? 'active' : ''}} ">
+                <a href="{{ url('') }}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data Warga Desa</span>
+                </a>
+                 <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/sorga/1') }}" class="submenu-link">Banjar Dinas Sogra</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/sebudi/2') }}" class="submenu-link">Banjar Dinas Sebudi</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/dukuh/3') }}">Banjar Dinas Badeg Dukuh</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/tengah/4') }}">Banjar Dinas Badeg Tengah</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/kelodan/5') }}">Banjar Dinas Badeg Kelodan</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/ancut/6') }}">Banjar Dinas Ancut</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/yeha/7') }}">Banjar Dinas Yeha</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/pura/8') }}">Banjar Dinas Pura</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/lebih/9') }}">Banjar Dinas Lebih</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/citizen/telung/10') }}">Banjar Dinas Telung Buana</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-item has-sub {{ request()->is('bpjs') ? 'active' : ''}} ">
+                <a href="{{ url('') }}" class='sidebar-link'>
+                    <i class="bi bi-person"></i>
+                    <span>Data BPJS</span>
+                </a>
+                 <ul class="submenu">
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/sorga') }}"
+                        class="submenu-link">BPJS Banjar Dinas Sogra</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/sebudi') }}" class="submenu-link">BPJS Banjar Dinas Sebudi</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/dukuh') }}" class="submenu-link">BPJS Banjar Dinas Badeg Dukuh</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/tengah') }}" class="submenu-link">BPJS Banjar Dinas Badeg Tengah</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/kelodan') }}" class="submenu-link">BPJS Banjar Dinas Badeg Kelodan</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/ancut') }}" class="submenu-link">BPJS Banjar Dinas Ancut</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/yeha') }}" class="submenu-link">BPJS Banjar Dinas Yeha</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/pura') }}" class="submenu-link">BPJS Banjar Dinas Pura</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/lebih') }}" class="submenu-link">BPJS Banjar Dinas Lebih</a>
+                    </li>
+                    <li class="submenu-item">
+                        <a href="{{ url('/bpjs/telung') }}" class="submenu-link">BPJS Banjar Dinas Telung Buana</a>
+                    </li>
+                </ul>
+            </li>
+            @endif
+
+            @if(session('role') === 'Admin Desa')
+            <li class="sidebar-item {{ request()->is('dashboard') ? 'active' : ''}} ">
+                <a href="{{url('/dashboard')}}" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Menu Utama</span>
+                </a>
+            </li>
+
+
+            <li class="sidebar-item {{ request()->is('news') ? 'active' : ''}} ">
+                <a href="{{ url('/news') }}" class='sidebar-link'>
+                    <i class="bi bi-newspaper"></i>
+                    <span>Berita Desa</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ request()->is('keuangan') ? 'active' : ''}} ">
+                <a href="{{ url('/keuangan') }}" class='sidebar-link'>
+                    <i class="bi bi-cash-stack"></i>
+                    <span>Apbdes Desa</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item {{ request()->is('SuratDesa') ? 'active' : ''}} ">
+                <a href="{{ url('/SuratDesa') }}" class='sidebar-link'>
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Surat Desa</span>
+                </a>
+            </li>
+
+
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
 
             <li class="sidebar-item has-sub {{ request()->is('') ? 'active' : ''}} ">
                 <a href="{{ url('') }}" class='sidebar-link'>
@@ -277,6 +465,12 @@
                     <span>Data BPJS</span>
                 </a>
             </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
             @endif
 
             @if(session('role') === 'Admin Banjar Sorga')
@@ -302,6 +496,12 @@
                 <a href="{{url('/bpjs/sorga')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
                 </a>
             </li>
             @endif
@@ -331,6 +531,12 @@
                     <span>Data BPJS</span>
                 </a>
             </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
             @endif
 
             @if(session('role') === 'Admin Banjar Sebudi')
@@ -356,6 +562,12 @@
                 <a href="{{url('/bpjs/sebudi')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
                 </a>
             </li>
             @endif
@@ -385,6 +597,12 @@
                     <span>Data BPJS</span>
                 </a>
             </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
             @endif
 
             @if(session('role') === 'Admin Banjar Badeg Kelodan')
@@ -410,6 +628,12 @@
                 <a href="{{url('/bpjs/kelodan')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
                 </a>
             </li>
             @endif
@@ -439,6 +663,12 @@
                     <span>Data BPJS</span>
                 </a>
             </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
             @endif
 
             @if(session('role') === 'Admin Banjar Yeha')
@@ -464,6 +694,12 @@
                 <a href="{{url('/bpjs/yeha')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
                 </a>
             </li>
             @endif
@@ -493,6 +729,12 @@
                     <span>Data BPJS</span>
                 </a>
             </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
+                </a>
+            </li>
             @endif
 
             @if(session('role') === 'Admin Banjar Telung Buana')
@@ -518,6 +760,12 @@
                 <a href="{{url('/bpjs/buana')}}" class='sidebar-link'>
                     <i class="bi bi-briefcase"></i>
                     <span>Data BPJS</span>
+                </a>
+            </li>
+            <li class="sidebar-item {{ request()->is('surat-keluar') ? 'active' : ''}} ">
+                <a href="{{ url('/surat-keluar') }}" class='sidebar-link'>
+                    <i class="bi bi-send"></i>
+                    <span>Surat Keluar</span>
                 </a>
             </li>
             @endif
