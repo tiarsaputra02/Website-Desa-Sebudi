@@ -262,25 +262,26 @@ pemuda, seni budaya dan olahraga guna menekan tingkat kenakalan remaja</li>
           </div>
         </div>
 
-        <!-- CARD 15 -->
+        <!-- CARD 14 -->
         <div class="min-w-full md:min-w-[33.3333%] px-3">
           <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
             <img src="/images/perangkat/kadus.jpg"
                  class="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
-            <h3 class="font-semibold text-lg">I Gede Wenten </h3>
+            <h3 class="font-semibold text-lg">I Gede Wenten</h3>
             <p class="text-gray-600 text-sm">Kadus Lebih </p>
           </div>
         </div>
 
-        <!-- CARD 16 -->
+        <!-- CARD 14 -->
         <div class="min-w-full md:min-w-[33.3333%] px-3">
           <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
             <img src="/images/perangkat/kadus.jpg"
                  class="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
             <h3 class="font-semibold text-lg">I Made Madya</h3>
-            <p class="text-gray-600 text-sm">Kadus Telung Buana</p>
+            <p class="text-gray-600 text-sm">Kadus Telung Buana </p>
           </div>
         </div>
+
 
       </div>
     </div>
@@ -300,7 +301,35 @@ pemuda, seni budaya dan olahraga guna menekan tingkat kenakalan remaja</li>
     </button>
 
   </div>
+  <script>
+    const slider = document.getElementById('desa-slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let index = 0;
+
+    const cards = slider.children;
+    const totalCards = cards.length;
+    const visibleCards = 3; // untuk md breakpoint
+
+    function updateSlider() {
+      const cardWidth = cards[0].offsetWidth;
+      slider.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = Math.max(index - 1, 0);
+      updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = Math.min(index + 1, totalCards - visibleCards);
+      updateSlider();
+    });
+
+    window.addEventListener('resize', updateSlider);
+  </script>
 </section>
+
 
 <!-- SECTION: SARANA & PRASARANA -->
 <section class="py-20 bg-white">
@@ -314,7 +343,6 @@ pemuda, seni budaya dan olahraga guna menekan tingkat kenakalan remaja</li>
     </div>
 </section>
 
-@vite('resources/js/profile-nav.js')
 
 @endsection
 

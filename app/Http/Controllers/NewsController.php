@@ -14,7 +14,7 @@ class NewsController extends Controller
     {
         $berita = News::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('News.index', compact('berita'));
+        return view('news.index', compact('berita'));
     }
     public function create()
     {
@@ -71,7 +71,7 @@ public function store(Request $request)
     public function edit(News $news)
     {
         $news->load('images');
-        
+
     return view('news.edit', compact('news'));
     }
 public function update(Request $request, News $news)

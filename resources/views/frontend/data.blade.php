@@ -255,14 +255,6 @@
     window.kategoribpjsStat = @json($kategoribpjsStat);
 </script>
 
-@vite('resources/js/chart-jeniskelamin.js')
-@vite('resources/js/chart-pekerjaan.js')
-@vite('resources/js/chart-agama.js')
-@vite('resources/js/chart-bantuan.js')
-@vite('resources/js/chart-umur.js')
-@vite('resources/js/chart-pendidikan.js')
-@vite('resources/js/chart-perkawinan.js')
-@vite('resources/js/chart-bpjs.js')
 
 @endsection
 
